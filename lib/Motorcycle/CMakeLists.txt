@@ -1,0 +1,3 @@
+add_library(Motorcycle INTERFACE)
+target_include_directories(Motorcycle INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(Motorcycle INTERFACE Vehicle)
