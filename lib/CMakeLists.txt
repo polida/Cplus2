@@ -1,2 +1,4 @@
-add_subdirectory(SimpleMath )
-add_subdirectory(ListOp)
+add_subdirectory(Motorcycle)
+add_subdirectory(Car)
+add_subdirectory(Vehicle)
+add_subdirectory(Truck)

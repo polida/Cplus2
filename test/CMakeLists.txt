@@ -10,23 +10,34 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-        SimpleMath_tests
-        SimpleMath_tests.cpp
+        Point_tests
+        Point_tests.cpp
+        Duration_tests.cpp
 )
 add_executable(
-        ListOp_tests
-        ListOp_tests.cpp
+        Time_tests
+        Time_tests.cpp
+)
+add_executable(
+        Duration_tests
+        Duration_tests.cpp
+)
+
+target_link_libraries(
+        Point_tests
+        GTest::gtest_main
+        Math
 )
 target_link_libraries(
-        SimpleMath_tests
+        Time_tests
         GTest::gtest_main
-        SimpleMath
+        Time
 )
 target_link_libraries(
-        ListOp_tests
+        Duration_tests
         GTest::gtest_main
-        ListOp
+        Duration
 )
 
 include(GoogleTest)
-gtest_discover_tests(SimpleMath_tests list_tests)
+gtest_discover_tests( Point_tests )
